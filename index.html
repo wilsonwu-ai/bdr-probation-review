@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Snappy BD 3-Month Probation Review</title>
+  <link rel="icon" type="image/png" href="snappy-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --magenta: #B5198A;
+      --magenta-ink: #8C1169;
+      --magenta-soft: #FBEAF4;
+      --red: #D7263D;
+      --green: #2EA34D;
+      --green-ink: #1F7F3A;
+      --amber: #F5A623;
+      --ink: #0F0F12;
+      --body: #3A3A40;
+      --muted: #6B6B73;
+      --line: #E5E5EA;
+      --surface: #F7F7F9;
+      --bg: #FFFFFF;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--magenta);
+      color: var(--body);
+      line-height: 1.5;
+      min-height: 100vh;
+      padding: 24px 16px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: var(--bg);
+      border-radius: 20px;
+      box-shadow: 0 12px 32px rgba(15, 15, 18, 0.18);
+      overflow: hidden;
+    }
+
+    /* Header */
+    .header {
+      background: var(--magenta);
+      color: var(--bg);
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    .logo-tile {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      background: var(--bg);
+      border-radius: 16px;
+      padding: 8px;
+      margin-bottom: 16px;
+    }
+
+    .logo-tile img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
+
+    .header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 40px;
+      line-height: 48px;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      margin-bottom: 8px;
+    }
+
+    .header .subtitle {
+      font-size: 16px;
+      opacity: 0.92;
+    }
+
+    /* Employee info */
+    .employee-info {
+      background: var(--surface);
+      padding: 24px 32px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .info-field {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .info-field.wide {
+      grid-column: 1 / -1;
+    }
+
+    .info-field label,
+    .field-label {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    select {
+      cursor: pointer;
+    }
+
+    textarea {
+      resize: vertical;
+      line-height: 1.5;
+    }
+
+    input:hover,
+    select:hover,
+    textarea:hover {
+      border-color: var(--magenta);
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--magenta);
+      box-shadow: 0 0 0 3px rgba(181, 25, 138, 0.18);
+    }
+
+    /* Scoring guide */
+    .guide {
+      margin: 24px 32px 0;
+      padding: 16px 20px;
+      background: var(--magenta-soft);
+      border-left: 4px solid var(--magenta);
+      border-radius: 8px;
+      color: var(--ink);
+      font-size: 14px;
+    }
+
+    .guide strong {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    /* Pillars */
+    .content {
+      padding: 24px 32px 32px;
+    }
+
+    .pillar {
+      margin-bottom: 32px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .pillar-header {
+      background: var(--magenta);
+      color: var(--bg);
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .pillar-header h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 600;
+    }
+
+    .pillar-score {
+      background: var(--bg);
+      color: var(--magenta-ink);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .pillar-intro {
+      padding: 12px 24px;
+      font-size: 14px;
+      color: var(--muted);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section {
+      padding: 24px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section:last-child {
+      border-bottom: none;
+    }
+
+    .section h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+
+    .metric {
+      background: var(--bg);
+      padding: 16px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--line);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .metric:last-child {
+      margin-bottom: 0;
+    }
+
+    .metric:hover {
+      box-shadow: 0 4px 12px rgba(15, 15, 18, 0.08);
+    }
+
+    .metric.is-scored {
+      border-left-color: var(--magenta);
+    }
+
+    .metric-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .metric-name {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .badge {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 2px 10px;
+      border-radius: 999px;
+      background: var(--magenta-soft);
+      color: var(--magenta-ink);
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      vertical-align: middle;
+    }
+
+    .metric-points {
+      color: var(--magenta-ink);
+      font-size: 14px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .metric-input {
+      display: grid;
+      grid-template-columns: 1fr 104px;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .score-box {
+      text-align: center;
+      padding: 9px 8px;
+      border: 1px solid var(--magenta);
+      border-radius: 8px;
+      background: var(--magenta-soft);
+      color: var(--magenta-ink);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .criteria {
+      margin-top: 8px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .evidence-input {
+      margin-top: 8px;
+      font-size: 14px;
+      min-height: 42px;
+    }
+
+    .print-value,
+    .print-text {
+      display: none;
+    }
+
+    /* Summary */
+    .summary {
+      background: var(--magenta);
+      color: var(--bg);
+      padding: 32px;
+      border-radius: 12px;
+      margin-top: 32px;
+    }
+
+    .summary h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 28px;
+      line-height: 36px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .progress {
+      font-size: 14px;
+      opacity: 0.92;
+      margin-bottom: 24px;
+    }
+
+    .score-display {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .score-item {
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      padding: 16px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .score-label {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      opacity: 0.95;
+      margin-bottom: 4px;
+    }
+
+    .score-value {
+      font-family: 'Poppins', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .outcome-card {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 24px;
+      align-items: center;
+      background: var(--bg);
+      color: var(--ink);
+      border-radius: 12px;
+      border-left: 8px solid var(--muted);
+      padding: 24px;
+    }
+
+    .total {
+      text-align: center;
+    }
+
+    .caption {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .total-value {
+      font-family: 'Poppins', sans-serif;
+      font-size: 40px;
+      line-height: 48px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .outcome-name {
+      font-family: 'Poppins', sans-serif;
+      font-size: 28px;
+      line-height: 36px;
+      font-weight: 700;
+      margin: 4px 0;
+    }
+
+    .outcome-desc {
+      color: var(--body);
+    }
+
+    .caps {
+      margin-top: 12px;
+      padding-left: 20px;
+      font-size: 14px;
+      color: var(--ink);
+    }
+
+    .caps li::marker {
+      color: var(--red);
+    }
+
+    .bands {
+      margin-top: 16px;
+      font-size: 14px;
+      opacity: 0.95;
+    }
+
+    /* Narrative sections */
+    .feedback-section {
+      margin-top: 32px;
+    }
+
+    .feedback-section > h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 28px;
+      line-height: 36px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 24px;
+    }
+
+    .feedback-group {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+
+    .feedback-group h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--magenta-ink);
+      margin-bottom: 16px;
+    }
+
+    .feedback-question {
+      margin-bottom: 16px;
+    }
+
+    .feedback-question:last-child {
+      margin-bottom: 0;
+    }
+
+    .feedback-question label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .feedback-question textarea {
+      min-height: 90px;
+    }
+
+    .decision-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .hint {
+      margin-top: 8px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .signoff {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 24px;
+    }
+
+    .sig-line {
+      height: 40px;
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .sig-label {
+      margin-top: 8px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* Actions */
+    .export-buttons {
+      padding: 24px 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      background: var(--surface);
+      border-top: 1px solid var(--line);
+    }
+
+    .btn {
+      padding: 12px 20px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--magenta);
+      color: var(--bg);
+    }
+
+    .btn-primary:hover {
+      background: var(--magenta-ink);
+      box-shadow: 0 8px 24px rgba(181, 25, 138, 0.20);
+    }
+
+    .btn-secondary {
+      background: var(--bg);
+      color: var(--magenta);
+      border-color: var(--magenta);
+    }
+
+    .btn-secondary:hover {
+      background: var(--magenta-soft);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--magenta);
+    }
+
+    .btn-ghost:hover {
+      text-decoration: underline;
+    }
+
+    .btn:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(181, 25, 138, 0.35);
+    }
+
+    .page-footer {
+      max-width: 1200px;
+      margin: 16px auto 0;
+      text-align: center;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    .wordmark {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+    }
+
+    .toast {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      padding: 12px 20px;
+      background: var(--ink);
+      color: var(--bg);
+      border-radius: 8px;
+      font-weight: 600;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+      z-index: 1000;
+    }
+
+    .toast.show {
+      opacity: 1;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+
+    @media (max-width: 640px) {
+      .header {
+        padding: 24px 16px;
+      }
+
+      .header h1 {
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      .employee-info,
+      .content,
+      .export-buttons {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .guide {
+        margin-left: 16px;
+        margin-right: 16px;
+      }
+
+      .pillar-header,
+      .pillar-intro,
+      .section {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .metric-header {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .metric-input,
+      .outcome-card,
+      .decision-grid,
+      .signoff {
+        grid-template-columns: 1fr;
+      }
+
+      .summary {
+        padding: 24px 16px;
+      }
+
+      .export-buttons .btn {
+        flex: 1 1 100%;
+      }
+    }
+
+    @media print {
+      @page {
+        size: letter;
+        margin: 12mm;
+      }
+
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        background: var(--bg);
+        padding: 0;
+        font-size: 12px;
+      }
+
+      .container {
+        max-width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .guide,
+      .export-buttons,
+      .toast,
+      .page-footer {
+        display: none !important;
+      }
+
+      .header {
+        padding: 16px;
+      }
+
+      .logo-tile {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 8px;
+      }
+
+      .header h1 {
+        font-size: 24px;
+        line-height: 32px;
+      }
+
+      .employee-info,
+      .content {
+        padding: 16px;
+      }
+
+      .pillar,
+      .section,
+      .feedback-group {
+        break-inside: auto;
+      }
+
+      .pillar-header,
+      .metric,
+      .outcome-card,
+      .signoff {
+        break-inside: avoid;
+      }
+
+      .pillar-header,
+      .pillar-intro,
+      .section h3 {
+        break-after: avoid;
+      }
+
+      .pillar + .pillar {
+        break-before: page;
+      }
+
+      .decision-grid,
+      .feedback-group:last-child {
+        break-inside: avoid;
+      }
+
+      .metric:hover {
+        box-shadow: none;
+      }
+
+      select[data-field],
+      textarea[data-field] {
+        display: none !important;
+      }
+
+      .print-value {
+        display: block;
+        padding: 8px 12px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        color: var(--ink);
+      }
+
+      .print-text {
+        display: block;
+        min-height: 24px;
+        white-space: pre-wrap;
+        color: var(--ink);
+      }
+
+      .evidence .print-text {
+        margin-top: 8px;
+        font-size: 11px;
+      }
+
+      .evidence .print-text:empty {
+        display: none;
+      }
+
+      .feedback-question .print-text {
+        padding: 8px 12px;
+        min-height: 48px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+      }
+
+      .summary {
+        break-before: page;
+        break-inside: avoid;
+      }
+
+      .feedback-section {
+        break-before: page;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo-tile">
+        <img src="snappy-logo.png" alt="Snappy">
+      </div>
+      <h1>3-Month Probation Review</h1>
+      <div class="subtitle">Business Development Representative</div>
+    </header>
+
+    <section class="employee-info" aria-label="Employee details">
+      <div class="info-grid">
+        <div class="info-field">
+          <label for="employeeName">Employee Name</label>
+          <input type="text" id="employeeName" data-field="employeeName" placeholder="Enter name" autocomplete="off">
+        </div>
+        <div class="info-field">
+          <label for="market">Market</label>
+          <input type="text" id="market" data-field="market" placeholder="e.g., Montreal" autocomplete="off">
+        </div>
+        <div class="info-field">
+          <label for="managerName">Manager</label>
+          <input type="text" id="managerName" data-field="managerName" placeholder="Enter manager name" autocomplete="off">
+        </div>
+        <div class="info-field">
+          <label for="startDate">Start Date</label>
+          <input type="date" id="startDate" data-field="startDate">
+        </div>
+        <div class="info-field">
+          <label for="probationEnd">Probation End Date</label>
+          <input type="date" id="probationEnd" data-field="probationEnd">
+        </div>
+        <div class="info-field">
+          <label for="reviewDate">Review Date</label>
+          <input type="date" id="reviewDate" data-field="reviewDate">
+        </div>
+        <div class="info-field wide">
+          <label for="evidenceSources">Evidence Reviewed</label>
+          <input type="text" id="evidenceSources" data-field="evidenceSources" placeholder="e.g., call audit of all recorded calls, CRM deal export, standup notes" autocomplete="off">
+        </div>
+      </div>
+    </section>
+
+    <aside class="guide">
+      <strong>How to score.</strong> Score each metric from evidence inside the probation window: the call audit, the CRM and your standup and one-on-one notes. Pick the highest row the BD fully meets. Where a row has two conditions, both must be met. Note the evidence under each metric so the decision can be explained later. The recommended outcome updates as you go, and you record the final decision in the last section.
+    </aside>
+
+    <main class="content">
+      <div id="rubric"></div>
+
+      <section class="summary" aria-live="polite">
+        <h2>Probation Summary</h2>
+        <div class="progress" id="progress">Scored 0 of 0 metrics</div>
+        <div class="score-display" id="summaryTiles"></div>
+
+        <div class="outcome-card" id="outcomeCard">
+          <div class="total">
+            <div class="caption">Total Score</div>
+            <div class="total-value"><span id="totalScore">0</span> / 100</div>
+          </div>
+          <div>
+            <div class="caption">Recommended Outcome</div>
+            <div class="outcome-name" id="outcomeName">Not scored yet</div>
+            <div class="outcome-desc" id="outcomeDesc">Score the review to see the recommended outcome.</div>
+            <ul class="caps" id="capsList" hidden></ul>
+          </div>
+        </div>
+
+        <div class="bands">
+          80 to 100: Confirm. 65 to 79: Confirm with a development plan. 50 to 64: Extend 30 days with written conditions. Under 50: Do not confirm.
+          A Pricing Authority score of 0, or any pillar under 40% of its points, caps the outcome at Extend 30 days.
+        </div>
+      </section>
+
+      <section class="feedback-section">
+        <h2>Assessment and Decision</h2>
+
+        <div class="feedback-group">
+          <h3>Manager Assessment</h3>
+          <div class="feedback-question">
+            <label for="noteStrongest">What is the strongest evidence for confirming this BD?</label>
+            <textarea id="noteStrongest" data-field="noteStrongest" placeholder="Specific calls, deals or numbers"></textarea>
+          </div>
+          <div class="feedback-question">
+            <label for="noteRisk">What is the biggest risk if we confirm?</label>
+            <textarea id="noteRisk" data-field="noteRisk" placeholder="The gap that would hurt most in months 4 to 12"></textarea>
+          </div>
+          <div class="feedback-question">
+            <label for="noteSkillWill">Are the gaps skill (coachable with time) or will (effort, attitude)?</label>
+            <textarea id="noteSkillWill" data-field="noteSkillWill" placeholder="Skill gaps close with coaching. Will gaps rarely do."></textarea>
+          </div>
+        </div>
+
+        <div class="feedback-group">
+          <h3>Trainer and Peer Input</h3>
+          <div class="feedback-question">
+            <label for="noteRamp">How fast is this BD ramping compared with other new BDs?</label>
+            <textarea id="noteRamp" data-field="noteRamp" placeholder="Trainer's read"></textarea>
+          </div>
+          <div class="feedback-question">
+            <label for="noteFeedback">How does this BD take feedback? Give one example.</label>
+            <textarea id="noteFeedback" data-field="noteFeedback" placeholder="What was said, and what changed afterwards"></textarea>
+          </div>
+        </div>
+
+        <div class="feedback-group">
+          <h3>Decision and Next Steps</h3>
+          <div class="decision-grid">
+            <div>
+              <label class="field-label" for="finalDecision">Final Decision</label>
+              <select id="finalDecision" data-field="finalDecision">
+                <option value="">Select the decision</option>
+                <option value="confirm">Confirm</option>
+                <option value="confirmPlan">Confirm with a development plan</option>
+                <option value="extend">Extend 30 days with written conditions</option>
+                <option value="notConfirm">Do not confirm</option>
+              </select>
+              <div class="hint" id="decisionHint">The manager makes the final call. If it differs from the recommended outcome, say why below.</div>
+            </div>
+            <div>
+              <label class="field-label" for="followUpDate">Follow-Up Review Date</label>
+              <input type="date" id="followUpDate" data-field="followUpDate">
+            </div>
+          </div>
+          <div class="feedback-question">
+            <label for="noteReason">Reason for the decision</label>
+            <textarea id="noteReason" data-field="noteReason" placeholder="Two or three sentences a third party could follow"></textarea>
+          </div>
+          <div class="feedback-question">
+            <label for="noteConditions">Conditions and goals for the next 30 to 60 days</label>
+            <textarea id="noteConditions" data-field="noteConditions" placeholder="Specific and measurable, e.g., 8 demos a month, every concession approved in writing first"></textarea>
+          </div>
+          <div class="feedback-question">
+            <label for="noteEmployee">Employee comments</label>
+            <textarea id="noteEmployee" data-field="noteEmployee" placeholder="The employee's response to this review"></textarea>
+          </div>
+
+          <div class="signoff">
+            <div>
+              <div class="sig-line"></div>
+              <div class="sig-label">Employee signature and date</div>
+            </div>
+            <div>
+              <div class="sig-line"></div>
+              <div class="sig-label">Manager signature and date</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="export-buttons">
+      <button type="button" class="btn btn-primary" id="btnPdf">Export as PDF</button>
+      <button type="button" class="btn btn-secondary" id="btnSaveFile">Save Review File</button>
+      <button type="button" class="btn btn-secondary" id="btnOpenFile">Open Review File</button>
+      <button type="button" class="btn btn-ghost" id="btnClear">Clear All</button>
+      <input type="file" id="fileInput" accept="application/json,.json" class="visually-hidden" tabindex="-1" aria-hidden="true">
+    </div>
+  </div>
+
+  <footer class="page-footer">
+    <span class="wordmark">snappy*</span> &middot; Confidential. For the employee and their manager only.
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    // Rubric. Each metric's max must equal its highest option value, and the pillar maxes must sum to 100.
+    const RUBRIC = [
+      {
+        id: 'p1',
+        title: 'Pillar 1: Activity and Pipeline Build',
+        short: 'Activity',
+        max: 35,
+        intro: 'Counted over the full probation window, which is about one quarter. The bands are anchored to the full team\'s quarterly activity bands.',
+        sections: [
+          {
+            title: 'Core Activity (28 points)',
+            metrics: [
+              {
+                id: 'demos', name: 'Demos Completed', max: 12,
+                placeholder: 'Select demo count',
+                criteria: 'Deals that entered Demo Complete in the window. A demo is a second to fourth conversation with a prospect in the consideration or decision phase that covers product, price or service. A first call that hooks the prospect and books the demo is a pitch, not a demo.',
+                options: [
+                  ['12', '24 or more demos (8 a month)'],
+                  ['10', '21 to 23 demos'],
+                  ['8', '18 to 20 demos (6 a month)'],
+                  ['5', '12 to 17 demos'],
+                  ['2', '6 to 11 demos'],
+                  ['0', 'Fewer than 6 demos']
+                ]
+              },
+              {
+                id: 'recorded', name: 'Recorded Client Conversations', max: 8,
+                placeholder: 'Select recorded count',
+                criteria: 'Recorded on Plaud, or chat screenshots for chat-based accounts. Real client conversations only: no internal or practice calls.',
+                options: [
+                  ['8', '30 or more recorded'],
+                  ['7', '25 to 29'],
+                  ['5', '15 to 24'],
+                  ['3', '10 to 14'],
+                  ['0', 'Fewer than 10']
+                ]
+              },
+              {
+                id: 'dealsLogged', name: 'Deals Logged Through the BD Deal Form', max: 8,
+                placeholder: 'Select deals logged',
+                criteria: 'Outbound deal submissions through the BD deal form, one credit per restaurant. Deals that were reassigned or imported to the BD do not count.',
+                options: [
+                  ['8', '80 or more deals logged'],
+                  ['7', '70 to 79'],
+                  ['5', '50 to 69'],
+                  ['3', '40 to 49'],
+                  ['1', '20 to 39'],
+                  ['0', 'Fewer than 20']
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Pipeline Progression (7 points)',
+            metrics: [
+              {
+                id: 'firstWins', name: 'First Wins', max: 7,
+                placeholder: 'Select wins',
+                criteria: 'Deals the BD sourced that reached Invoiced or Deal Won inside the window.',
+                options: [
+                  ['7', '3 or more deals won or invoiced'],
+                  ['5', '2 deals won or invoiced'],
+                  ['3', '1 deal won or invoiced'],
+                  ['2', 'No win yet, but 3 or more deals at Hot Lead or later with a dated next step'],
+                  ['0', 'No win and no late-stage pipeline']
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 'p2',
+        title: 'Pillar 2: Call Quality and Sales Craft',
+        short: 'Call Quality',
+        max: 30,
+        intro: 'Score from a call audit: grade every recorded call, or a random sample of at least 30 spread across all three months.',
+        sections: [
+          {
+            title: 'Call Audit (16 points)',
+            metrics: [
+              {
+                id: 'callMix', name: 'Call Quality Mix (Good, Base, Bad)', max: 10,
+                placeholder: 'Select call mix',
+                criteria: 'Good: a call you would play in training. Base: competent, nothing wrong, nothing memorable. Bad: a call that lost the prospect or broke a rule. Use the share of graded calls in each grade.',
+                options: [
+                  ['10', '25% or more Good, and 5% or less Bad'],
+                  ['8', '15% or more Good, and 10% or less Bad'],
+                  ['5', '10% or more Good, and 15% or less Bad'],
+                  ['2', '25% or less Bad, but none of the rows above'],
+                  ['0', 'More than 25% Bad, whatever the Good share']
+                ]
+              },
+              {
+                id: 'coldCall', name: 'Cold Call Scorecard (6 gates)', max: 6,
+                placeholder: 'Select average gates passed',
+                criteria: 'Average gates passed on first-touch calls: opener, gatekeeper navigation, problem proposition, discovery, objection handling, and the ask. PASS counts 1, PARTIAL counts 0.5. The ask matters most: a booked demo with a day and time.',
+                options: [
+                  ['6', '5 or more of 6 on average'],
+                  ['5', '4 to 4.9 of 6'],
+                  ['3', '3 to 3.9 of 6'],
+                  ['1', '2 to 2.9 of 6'],
+                  ['0', 'Under 2 of 6']
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Selling Skills (14 points)',
+            metrics: [
+              {
+                id: 'demoCraft', name: 'Sales Development Framework (5 gates)', max: 6,
+                placeholder: 'Select average gates passed',
+                criteria: 'Average gates passed on demos: owner and operator both engaged, ROI validated by the person paying, compelling event confirmed, Snappy demoed last, and unique value proven. PASS counts 1, PARTIAL counts 0.5.',
+                options: [
+                  ['6', '4 or more of 5 on average'],
+                  ['4', '3 to 3.9 of 5'],
+                  ['2', '2 to 2.9 of 5'],
+                  ['0', 'Under 2 of 5']
+                ]
+              },
+              {
+                id: 'productKnowledge', name: 'Product and Pricing Knowledge', max: 8,
+                placeholder: 'Select knowledge level',
+                criteria: 'Quotes the current rate card correctly and keeps the plans distinct, such as the flat monthly fee versus the 4% commission plan, where card processing applies on top. One price per item per call.',
+                options: [
+                  ['8', 'Accurate every time, and explains the plans clearly'],
+                  ['6', 'Knows the core ladder, looks up the rest, and follows up the same day'],
+                  ['3', 'Recurring gaps, or unclear explanations of the plans'],
+                  ['0', 'States wrong or conflicting prices to prospects']
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 'p3',
+        title: 'Pillar 3: Process, Integrity and CRM',
+        short: 'Process',
+        max: 20,
+        intro: 'Probation is the time to lock in habits. A new BD who closes but ignores pricing rules or the CRM creates cleanup work for everyone else.',
+        sections: [
+          {
+            title: 'Integrity (8 points)',
+            metrics: [
+              {
+                id: 'pricingAuthority', name: 'Pricing Authority', max: 8, gate: true,
+                placeholder: 'Select conduct',
+                criteria: 'No discount, free product, free hardware, waived fee or non-standard term (the standard contract is 24 months) without written manager approval first, and no offer is ever presented as secret. A score of 0 caps the outcome at Extend 30 days.',
+                options: [
+                  ['8', 'Clean: every concession approved in writing before it was offered'],
+                  ['4', 'One off-sheet offer, disclosed and corrected after coaching'],
+                  ['0', 'An off-sheet offer framed as secret, or repeated after coaching']
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Process Discipline (12 points)',
+            metrics: [
+              {
+                id: 'recordingDiscipline', name: 'Recording Discipline', max: 4,
+                placeholder: 'Select share recorded',
+                criteria: 'Share of client conversations that were recorded, checked against the calls logged in the CRM.',
+                options: [
+                  ['4', '95% or more recorded'],
+                  ['3', '80% to 94%'],
+                  ['1', '60% to 79%'],
+                  ['0', 'Under 60%']
+                ]
+              },
+              {
+                id: 'crmHygiene', name: 'CRM Hygiene', max: 5,
+                placeholder: 'Select spot-check result',
+                criteria: 'Spot-check 10 of the BD\'s deals: correct stage, contact and owner, a note after each touch, and a next step with a date.',
+                options: [
+                  ['5', '10 of 10 deals current'],
+                  ['4', '9 of 10'],
+                  ['2', '7 or 8 of 10'],
+                  ['0', '6 or fewer of 10']
+                ]
+              },
+              {
+                id: 'followThrough', name: 'Follow-Through', max: 3,
+                placeholder: 'Select follow-through',
+                criteria: 'Quotes, menus and follow-ups go out when promised, and commitments made to prospects are kept.',
+                options: [
+                  ['3', 'Same day, every commitment kept'],
+                  ['2', 'Usually on time'],
+                  ['1', 'Often late, needs chasing'],
+                  ['0', 'Commitments missed']
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 'p4',
+        title: 'Pillar 4: Coachability and Trajectory',
+        short: 'Trajectory',
+        max: 15,
+        intro: 'Three months is a short window. The direction of travel often says more than the level reached.',
+        sections: [
+          {
+            title: 'Growth Over the Window (11 points)',
+            metrics: [
+              {
+                id: 'trend', name: 'Month 1 to Month 3 Trend', max: 6,
+                placeholder: 'Select trend',
+                criteria: 'Compare month 1 with month 3 on demos completed and on the share of Good calls.',
+                options: [
+                  ['6', 'Clear improvement in both volume and quality'],
+                  ['4', 'Improving in one, steady in the other'],
+                  ['2', 'Flat'],
+                  ['0', 'Declining']
+                ]
+              },
+              {
+                id: 'appliesCoaching', name: 'Applies Coaching', max: 5,
+                placeholder: 'Select how coaching lands',
+                criteria: 'Pick 3 coaching points from standups or one-on-ones and check the calls that followed each one.',
+                options: [
+                  ['5', 'Coaching shows up in the next calls without a reminder'],
+                  ['3', 'Applies most points after a reminder'],
+                  ['1', 'Inconsistent'],
+                  ['0', 'Repeats the same miss after coaching']
+                ]
+              }
+            ]
+          },
+          {
+            title: 'Team Fit (4 points)',
+            metrics: [
+              {
+                id: 'reliability', name: 'Reliability and Team Fit', max: 4,
+                placeholder: 'Select level',
+                criteria: 'Standup attendance and preparation, reliability, and how the BD treats teammates and partners.',
+                options: [
+                  ['4', 'Prepared, reliable, and lifts the team'],
+                  ['3', 'Reliable'],
+                  ['1', 'Some attendance or reliability issues'],
+                  ['0', 'Frequent issues']
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ];
+
+    const OUTCOMES = {
+      confirm: { name: 'Confirm', desc: 'Passes probation. Confirm the role.', color: 'var(--green)' },
+      confirmPlan: { name: 'Confirm with a Development Plan', desc: 'Passes. Confirm the role and set 30 and 60 day goals for the gaps.', color: 'var(--green-ink)' },
+      extend: { name: 'Extend 30 Days', desc: 'Not yet. Extend probation with written conditions and a follow-up review date.', color: 'var(--amber)' },
+      notConfirm: { name: 'Do Not Confirm', desc: 'Below the bar for the role.', color: 'var(--red)' }
+    };
+    const RANK = ['notConfirm', 'extend', 'confirmPlan', 'confirm'];
+    const PILLAR_FLOOR = 0.4;
+    const STORAGE_KEY = 'snappyProbationReview.v1';
+    const FILE_APP_ID = 'snappy-probation-review';
+
+    const METRICS = RUBRIC.flatMap(p => p.sections.flatMap(s => s.metrics.map(m => ({ ...m, pillar: p.id }))));
+
+    function escapeHtml(text) {
+      return String(text).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    }
+
+    function renderRubric() {
+      const html = RUBRIC.map(p => `
+        <section class="pillar" aria-labelledby="${p.id}Title">
+          <div class="pillar-header">
+            <h2 id="${p.id}Title">${escapeHtml(p.title)}</h2>
+            <span class="pillar-score"><span id="${p.id}Score">0</span> / ${p.max}</span>
+          </div>
+          ${p.intro ? `<div class="pillar-intro">${escapeHtml(p.intro)}</div>` : ''}
+          ${p.sections.map(s => `
+            <div class="section">
+              <h3>${escapeHtml(s.title)}</h3>
+              ${s.metrics.map(m => `
+                <div class="metric" id="${m.id}Card">
+                  <div class="metric-header">
+                    <label class="metric-name" for="${m.id}">${escapeHtml(m.name)}${m.gate ? '<span class="badge">Caps outcome</span>' : ''}</label>
+                    <span class="metric-points">Max: ${m.max} points</span>
+                  </div>
+                  <div class="metric-input">
+                    <select id="${m.id}" data-field="${m.id}" data-metric="${m.id}">
+                      <option value="">${escapeHtml(m.placeholder)}</option>
+                      ${m.options.map(([v, label]) => `<option value="${v}">${escapeHtml(label)}</option>`).join('')}
+                    </select>
+                    <div class="score-box"><span id="${m.id}Score">0</span> / ${m.max}<span class="visually-hidden"> points</span></div>
+                  </div>
+                  <div class="criteria">${escapeHtml(m.criteria)}</div>
+                  <div class="evidence">
+                    <label class="visually-hidden" for="${m.id}Evidence">${escapeHtml(m.name)} evidence</label>
+                    <textarea class="evidence-input" id="${m.id}Evidence" data-field="${m.id}Evidence" rows="1" placeholder="Evidence: calls, dates, deals or counts"></textarea>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          `).join('')}
+        </section>
+      `).join('');
+      document.getElementById('rubric').innerHTML = html;
+
+      document.getElementById('summaryTiles').innerHTML = RUBRIC.map((p, i) => `
+        <div class="score-item">
+          <div class="score-label">Pillar ${i + 1}: ${escapeHtml(p.short)}</div>
+          <div class="score-value"><span id="${p.id}Summary">0</span> / ${p.max}</div>
+        </div>
+      `).join('');
+    }
+
+    // Selects and textareas get a static twin that is shown only in print, so long labels and notes never clip.
+    function addPrintMirrors() {
+      document.querySelectorAll('select[data-field]').forEach(el => {
+        const mirror = document.createElement('div');
+        mirror.className = 'print-value';
+        el.insertAdjacentElement('afterend', mirror);
+      });
+      document.querySelectorAll('textarea[data-field]').forEach(el => {
+        const mirror = document.createElement('div');
+        mirror.className = 'print-text';
+        el.insertAdjacentElement('afterend', mirror);
+      });
+    }
+
+    function syncPrintMirrors() {
+      document.querySelectorAll('select[data-field]').forEach(el => {
+        const mirror = el.nextElementSibling;
+        if (!mirror || !mirror.classList.contains('print-value')) return;
+        mirror.textContent = el.value === '' ? 'Not scored' : el.options[el.selectedIndex].text;
+      });
+      document.querySelectorAll('textarea[data-field]').forEach(el => {
+        const mirror = el.nextElementSibling;
+        if (!mirror || !mirror.classList.contains('print-text')) return;
+        mirror.textContent = el.value;
+      });
+    }
+
+    function autoGrow(el) {
+      el.style.height = 'auto';
+      el.style.height = el.scrollHeight + 2 + 'px';
+    }
+
+    function outcomeFor(total) {
+      if (total >= 80) return 'confirm';
+      if (total >= 65) return 'confirmPlan';
+      if (total >= 50) return 'extend';
+      return 'notConfirm';
+    }
+
+    function computeScores() {
+      const pillars = {};
+      let total = 0;
+      let scored = 0;
+      RUBRIC.forEach(p => { pillars[p.id] = { score: 0, scored: 0, count: 0 }; });
+      METRICS.forEach(m => {
+        const value = document.getElementById(m.id).value;
+        const pillar = pillars[m.pillar];
+        pillar.count++;
+        if (value !== '') {
+          const points = Number(value);
+          pillar.score += points;
+          pillar.scored++;
+          total += points;
+          scored++;
+        }
+      });
+
+      const caps = [];
+      METRICS.filter(m => m.gate).forEach(m => {
+        if (document.getElementById(m.id).value === '0') caps.push(`${m.name} scored 0.`);
+      });
+      RUBRIC.forEach(p => {
+        const pillar = pillars[p.id];
+        if (pillar.scored === pillar.count && pillar.score < p.max * PILLAR_FLOOR) {
+          caps.push(`${p.short} is under the 40% floor (${pillar.score} of ${p.max}).`);
+        }
+      });
+
+      let outcome = null;
+      if (scored > 0) {
+        outcome = outcomeFor(total);
+        if (caps.length && RANK.indexOf(outcome) > RANK.indexOf('extend')) outcome = 'extend';
+      }
+      return { pillars, total, scored, count: METRICS.length, caps, outcome };
+    }
+
+    function updateScores() {
+      METRICS.forEach(m => {
+        const value = document.getElementById(m.id).value;
+        document.getElementById(m.id + 'Score').textContent = value === '' ? 0 : value;
+        document.getElementById(m.id + 'Card').classList.toggle('is-scored', value !== '');
+      });
+
+      const result = computeScores();
+      RUBRIC.forEach(p => {
+        document.getElementById(p.id + 'Score').textContent = result.pillars[p.id].score;
+        document.getElementById(p.id + 'Summary').textContent = result.pillars[p.id].score;
+      });
+      document.getElementById('totalScore').textContent = result.total;
+
+      const remaining = result.count - result.scored;
+      document.getElementById('progress').textContent = remaining === 0
+        ? `All ${result.count} metrics scored`
+        : `Scored ${result.scored} of ${result.count} metrics`;
+
+      const card = document.getElementById('outcomeCard');
+      const nameEl = document.getElementById('outcomeName');
+      const descEl = document.getElementById('outcomeDesc');
+      // Unscored metrics count as 0, so a partial total would understate the BD. Show the outcome only when complete.
+      if (!result.outcome) {
+        nameEl.textContent = 'Not scored yet';
+        descEl.textContent = 'Score the review to see the recommended outcome.';
+        card.style.borderLeftColor = 'var(--muted)';
+      } else if (remaining > 0) {
+        nameEl.textContent = 'In progress';
+        descEl.textContent = `${remaining} ${remaining === 1 ? 'metric is' : 'metrics are'} still unscored. The recommended outcome appears once every metric is scored.`;
+        card.style.borderLeftColor = 'var(--muted)';
+      } else {
+        const outcome = OUTCOMES[result.outcome];
+        nameEl.textContent = outcome.name;
+        descEl.textContent = outcome.desc;
+        card.style.borderLeftColor = outcome.color;
+      }
+
+      const capsList = document.getElementById('capsList');
+      capsList.innerHTML = '';
+      result.caps.forEach(text => {
+        const li = document.createElement('li');
+        li.textContent = `${text} This caps the outcome at Extend 30 days.`;
+        capsList.appendChild(li);
+      });
+      capsList.hidden = result.caps.length === 0;
+
+      const hint = document.getElementById('decisionHint');
+      const base = 'The manager makes the final call. If it differs from the recommended outcome, say why below.';
+      hint.textContent = result.outcome && remaining === 0
+        ? `Recommended outcome: ${OUTCOMES[result.outcome].name}. ${base}`
+        : base;
+
+      syncPrintMirrors();
+      return result;
+    }
+
+    function collectFields() {
+      const fields = {};
+      document.querySelectorAll('[data-field]').forEach(el => { fields[el.dataset.field] = el.value; });
+      return fields;
+    }
+
+    function applyFields(fields) {
+      document.querySelectorAll('[data-field]').forEach(el => {
+        const value = fields[el.dataset.field];
+        if (typeof value !== 'string') return;
+        if (el.tagName === 'SELECT' && value !== '' && !Array.from(el.options).some(o => o.value === value)) return;
+        el.value = value;
+      });
+    }
+
+    let warnedStorage = false;
+    function saveLocal() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({ app: FILE_APP_ID, version: 1, fields: collectFields() }));
+        return true;
+      } catch (error) {
+        if (!warnedStorage) {
+          warnedStorage = true;
+          toast('Autosave is off in this browser. Use Save Review File to keep your work.');
+        }
+        return false;
+      }
+    }
+
+    function loadLocal() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return false;
+        const data = JSON.parse(raw);
+        if (data && data.fields) {
+          applyFields(data.fields);
+          return true;
+        }
+      } catch (error) {
+        // Storage can be blocked or hold a corrupt value. Start from a blank form.
+      }
+      return false;
+    }
+
+    let saveTimer = null;
+    function scheduleSave() {
+      clearTimeout(saveTimer);
+      saveTimer = setTimeout(saveLocal, 600);
+    }
+
+    let toastTimer = null;
+    function toast(message) {
+      const el = document.getElementById('toast');
+      el.textContent = message;
+      el.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => el.classList.remove('show'), 3000);
+    }
+
+    function pad(n) {
+      return String(n).padStart(2, '0');
+    }
+
+    function formatISO(date) {
+      return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
+    }
+
+    function todayISO() {
+      return formatISO(new Date());
+    }
+
+    function addMonthsISO(iso, months) {
+      const parts = iso.split('-').map(Number);
+      if (parts.length !== 3 || parts.some(Number.isNaN)) return '';
+      const [year, month, day] = parts;
+      const lastDay = new Date(year, month - 1 + months + 1, 0).getDate();
+      return formatISO(new Date(year, month - 1 + months, Math.min(day, lastDay)));
+    }
+
+    function fileSafe(text) {
+      return text.trim().replace(/[^A-Za-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    }
+
+    function saveFile() {
+      const fields = collectFields();
+      const payload = { app: FILE_APP_ID, version: 1, savedAt: new Date().toISOString(), fields };
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `Probation-Review-${fileSafe(fields.employeeName || '') || 'BD'}-${todayISO()}.json`;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      toast('Review file saved');
+    }
+
+    function openFile(file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          const data = JSON.parse(reader.result);
+          if (!data || data.app !== FILE_APP_ID || !data.fields) {
+            toast('That file is not a probation review file');
+            return;
+          }
+          resetForm();
+          applyFields(data.fields);
+          afterLoad();
+          saveLocal();
+          toast('Review loaded');
+        } catch (error) {
+          toast('Could not read that file');
+        }
+      };
+      reader.onerror = () => toast('Could not read that file');
+      reader.readAsText(file);
+    }
+
+    function resetForm() {
+      document.querySelectorAll('[data-field]').forEach(el => {
+        if (el.tagName === 'SELECT') el.selectedIndex = 0;
+        else el.value = '';
+      });
+    }
+
+    function afterLoad() {
+      const reviewDate = document.getElementById('reviewDate');
+      if (!reviewDate.value) reviewDate.value = todayISO();
+      const start = document.getElementById('startDate');
+      start.dataset.prev = start.value;
+      document.querySelectorAll('textarea[data-field]').forEach(autoGrow);
+      updateScores();
+    }
+
+    function clearAll() {
+      if (!confirm('Clear every score and note on this review? Save a review file first if you need a copy.')) return;
+      resetForm();
+      try { localStorage.removeItem(STORAGE_KEY); } catch (error) { /* storage blocked */ }
+      afterLoad();
+      toast('Review cleared');
+    }
+
+    let titleBeforePrint = document.title;
+    function beforePrint() {
+      syncPrintMirrors();
+      titleBeforePrint = document.title;
+      const name = document.getElementById('employeeName').value.trim();
+      if (name) document.title = `Probation Review - ${name}`;
+    }
+
+    function afterPrint() {
+      document.title = titleBeforePrint;
+    }
+
+    function init() {
+      renderRubric();
+      addPrintMirrors();
+
+      document.querySelectorAll('[data-field]').forEach(el => {
+        const handler = () => {
+          if (el.tagName === 'TEXTAREA') autoGrow(el);
+          if (el.dataset.metric || el.id === 'finalDecision') updateScores();
+          else syncPrintMirrors();
+          scheduleSave();
+        };
+        el.addEventListener(el.tagName === 'SELECT' ? 'change' : 'input', handler);
+      });
+
+      const start = document.getElementById('startDate');
+      const end = document.getElementById('probationEnd');
+      start.addEventListener('change', () => {
+        const previousAuto = start.dataset.prev ? addMonthsISO(start.dataset.prev, 3) : '';
+        if (start.value && (!end.value || end.value === previousAuto)) {
+          end.value = addMonthsISO(start.value, 3);
+        }
+        start.dataset.prev = start.value;
+        scheduleSave();
+      });
+
+      document.getElementById('btnPdf').addEventListener('click', () => {
+        saveLocal();
+        window.print();
+      });
+      document.getElementById('btnSaveFile').addEventListener('click', saveFile);
+      document.getElementById('btnOpenFile').addEventListener('click', () => document.getElementById('fileInput').click());
+      document.getElementById('fileInput').addEventListener('change', event => {
+        const file = event.target.files && event.target.files[0];
+        if (file) openFile(file);
+        event.target.value = '';
+      });
+      document.getElementById('btnClear').addEventListener('click', clearAll);
+
+      window.addEventListener('beforeprint', beforePrint);
+      window.addEventListener('afterprint', afterPrint);
+      window.addEventListener('beforeunload', saveLocal);
+
+      loadLocal();
+      afterLoad();
+    }
+
+    init();
+  </script>
+</body>
+</html>
