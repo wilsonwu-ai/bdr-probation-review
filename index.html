@@ -754,8 +754,13 @@
       }
 
       select[data-field],
-      textarea[data-field] {
+      textarea[data-field],
+      input[type="text"][data-field] {
         display: none !important;
+      }
+
+      .info-field .print-value {
+        min-height: 38px;
       }
 
       .print-value {
@@ -1281,9 +1286,9 @@
       `).join('');
     }
 
-    // Selects and textareas get a static twin that is shown only in print, so long labels and notes never clip.
+    // Selects, text inputs and textareas get a static twin that is shown only in print, so long values never clip.
     function addPrintMirrors() {
-      document.querySelectorAll('select[data-field]').forEach(el => {
+      document.querySelectorAll('select[data-field], input[type="text"][data-field]').forEach(el => {
         const mirror = document.createElement('div');
         mirror.className = 'print-value';
         el.insertAdjacentElement('afterend', mirror);
@@ -1300,6 +1305,11 @@
         const mirror = el.nextElementSibling;
         if (!mirror || !mirror.classList.contains('print-value')) return;
         mirror.textContent = el.value === '' ? 'Not scored' : el.options[el.selectedIndex].text;
+      });
+      document.querySelectorAll('input[type="text"][data-field]').forEach(el => {
+        const mirror = el.nextElementSibling;
+        if (!mirror || !mirror.classList.contains('print-value')) return;
+        mirror.textContent = el.value;
       });
       document.querySelectorAll('textarea[data-field]').forEach(el => {
         const mirror = el.nextElementSibling;
